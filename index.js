@@ -6,7 +6,8 @@ const app = express();
 
 // Проксируем все запросы с вашего адреса на API Telegram
 app.use('/', createProxyMiddleware({
-    target: 'https://api.telegram.org',
+    //target: 'https://api.telegram.org',
+    target: 'https://google.com',
     changeOrigin: true,
     pathRewrite: {
         '^/': '/', // сохраняем путь запроса
